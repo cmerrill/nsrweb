@@ -305,7 +305,7 @@ MEDIA QUERIES
 /*---------------------------------------------------------------
 Height-Dependent
 ---------------------------------------------------------------*/
-@media screen and (max-height: 360px) {
+@media only screen and (max-height: 360px) {
     .fixed-top {
         position: absolute;
     }
@@ -329,13 +329,13 @@ Height-Dependent
 Width-Dependent
 ---------------------------------------------------------------*/
 
-@media screen and (max-width: 720px) {
+@media only screen and (max-width: 720px) {
     .body .internal-column {
         width: 480px;
     }
 }
 
-@media screen and (max-width: 540px) {
+@media only screen and (max-width: 540px) {
     .nav {
         text-align: left;
     }
@@ -368,7 +368,7 @@ Width-Dependent
 /*---------------------------------------------------------------
 Header changes with width
 ---------------------------------------------------------------*/
-@media screen and (max-width: 420px) {
+@media only screen and (max-width: 420px) {
     h1 span {
         display: none;
     }
@@ -377,11 +377,25 @@ Header changes with width
     }
 }
 
-@media screen and (max-width: 580px) {
+@media only screen and (max-width: 580px) {
     .project-page h1 span {
         display: none;
     }
     .project-page h1 span.always {
         display: inline;
+    }
+}
+
+/*---------------------------------------------------------------
+Printing?
+---------------------------------------------------------------*/
+
+@media only print {
+    .fixed-top {
+        display: none;
+    }
+
+    .head {
+        margin-top: 0;
     }
 }
