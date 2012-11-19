@@ -71,7 +71,7 @@ a:hover {
     min-width: 320px;
 }
 
-.fixed {
+.fixed-top {
     position: fixed;
     width: 100%;
     top: 0;
@@ -99,12 +99,6 @@ a:hover {
     user-select: none;
 }
 
-@media screen and (max-width: 540px) {
-    .nav {
-        text-align: left;
-    }
-}
-
 .social {
     position: absolute;
     left: 0;
@@ -125,16 +119,6 @@ a:hover {
     color: #113F8C;
 }
 
-@media screen and (max-width: 540px) {
-    .social {
-        left: auto;
-        right: 0;
-        padding-left: 0;
-        font-size: 2em;
-        bottom: 5px;
-    }
-}
-
 
 /*
 ---------------------------------------------------------------*/
@@ -143,12 +127,6 @@ a:hover {
     position: absolute;
     bottom: 15px;
     right: 0;
-}
-
-@media screen and (max-width: 540px) {
-    .colours {
-        display: none;
-    }
 }
 
 .colour-box {
@@ -229,7 +207,8 @@ a:hover {
 
 .head {
     border-bottom: 1px solid #F18D05;
-    margin-top: 6.5em;
+    margin-top: 105px;
+    /*margin-top: 6.5em;*/
     text-align: center;
     padding-bottom: 2em;
     color: #616161;
@@ -259,14 +238,6 @@ h1 span.always {
     margin-left: 0.05em;
 }
 
-@media screen and (max-width: 420px) {
-    h1 span {
-        display: none;
-    }
-    h1 span.always {
-        display: inline;
-    }
-}
 
 .body {
     min-height: 400px;
@@ -278,21 +249,6 @@ h1 span.always {
     margin: auto;
     width: 640px;
 }
-
-@media screen and (max-width: 720px) {
-    .body .internal-column {
-        width: 480px;
-    }
-}
-
-@media screen and (max-width: 540px) {
-    .body .internal-column {
-        padding-left: 5%;
-        padding-right: 5%;
-        width: auto;
-    }
-}
-
 
 .body h2 {
     font-size: 2em;
@@ -327,14 +283,14 @@ h1 span.always {
 
 /*
 ---------------------------------------------------------------*/
-.face {
+.floating-photo{
     text-align: left;
     float: left;
     margin-right: 15px;
     margin-bottom: 15px;
 }
 
-.face img{
+.floating-photo img{
     border-radius: 10px;
     -o-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -342,9 +298,97 @@ h1 span.always {
     -border-radius: 10px;
 }
 
-@media screen and (max-width: 540) {
-    .face {
+/*---------------------------------------------------------------
+MEDIA QUERIES
+---------------------------------------------------------------*/
+
+/*---------------------------------------------------------------
+Height-Dependent
+---------------------------------------------------------------*/
+@media screen and (max-height: 360px) {
+    .fixed-top {
+        position: absolute;
+    }
+    .nav {
+        padding-top: 15px;
+    }
+
+    .head {
+        margin-top: 90px;
+    }
+
+    .social {
+        font-size: 1.5em;
+        bottom: 5px;
+    }
+
+    .colours {
+        bottom: 12.5px;
+    }
+
+    .colour-box {
+        height: 1.25em;
+        width: 1.25em;
+    }
+}
+
+/*---------------------------------------------------------------
+Width-Dependent
+---------------------------------------------------------------*/
+
+@media screen and (max-width: 720px) {
+    .body .internal-column {
+        width: 480px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .nav {
+        text-align: left;
+    }
+
+    .social {
+        left: auto;
+        right: 0;
+        padding-left: 0;
+        font-size: 1.5em;
+        bottom: 5px;
+    }
+
+    .colours {
+        display: none;
+    }
+
+    .body .internal-column {
+        padding-left: 5%;
+        padding-right: 5%;
+        width: auto;
+    }
+
+    .floating-photo {
         text-align: center;
         float: none;
+    }
+}
+
+
+/*---------------------------------------------------------------
+Header changes with width
+---------------------------------------------------------------*/
+@media screen and (max-width: 420px) {
+    h1 span {
+        display: none;
+    }
+    h1 span.always {
+        display: inline;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .project-page h1 span {
+        display: none;
+    }
+    .project-page h1 span.always {
+        display: inline;
     }
 }
