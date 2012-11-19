@@ -82,7 +82,7 @@ a:hover {
 ---------------------------------------------------------------*/
 
 .nav {
-    padding-top: 30px;
+    padding-top: 15px;
     padding-bottom: 15px;
     text-align: center;
     position: relative;
@@ -207,7 +207,7 @@ a:hover {
 
 .head {
     border-bottom: 1px solid #F18D05;
-    margin-top: 105px;
+    margin-top: 90px;
     /*margin-top: 6.5em;*/
     text-align: center;
     padding-bottom: 2em;
@@ -308,13 +308,6 @@ Height-Dependent
 @media screen and (max-height: 360px) {
     .fixed-top {
         position: absolute;
-    }
-    .nav {
-        padding-top: 15px;
-    }
-
-    .head {
-        margin-top: 90px;
     }
 
     .social {
