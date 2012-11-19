@@ -298,11 +298,11 @@ h1 span.always {
 }
 
 .floating-photo img{
-    border-radius: 10px;
     -o-border-radius: 10px;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     -border-radius: 10px;
+    border-radius: 10px;
 }
 
 /*---------------------------------------------------------------
@@ -317,11 +317,6 @@ Height-Dependent
         position: fixed;
     }
 
-    .social {
-        font-size: 1em;
-        bottom: 10px;
-    }
-
     .colours {
         bottom: 15px;
     }
@@ -329,6 +324,13 @@ Height-Dependent
     .colour-box {
         height: 1em;
         width: 1em;
+    }
+}
+
+@media only screen and (min-height: 360px) and (min-width: 540px) {
+    .social {
+        font-size: 1em;
+        bottom: 10px;
     }
 }
 
@@ -371,13 +373,13 @@ Width-Dependent
 /*---------------------------------------------------------------
 Header changes with width
 ---------------------------------------------------------------*/
-@media (min-width: 420px) {
+@media only all and (min-width: 420px) {
     h1 span {
          display: inline;
     }
 }
 
-@media (min-width: 580px) {
+@media only all and (min-width: 580px) {
     .project-page h1 span {
         display: inline;
     }
