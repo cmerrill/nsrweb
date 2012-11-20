@@ -103,7 +103,7 @@ a.file-link::after {
     padding-bottom: 15px;
     text-align: left;
     position: relative;
-    background-color: white;
+    background-color: rgba(255,255,255,0.97);
     border-bottom: 3px solid #F18D05;
     margin-left: 10px;
     margin-right: 10px;
