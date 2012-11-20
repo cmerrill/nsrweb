@@ -273,6 +273,8 @@ h1 span.always {
     padding-left: 5%;
     padding-right: 5%;
     width: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .body .internal-column::after {
@@ -318,7 +320,6 @@ h1 span.always {
 ---------------------------------------------------------------*/
 .floating-photo {
     text-align: center;
-    margin-right: 1em;
     margin-bottom: 1em;
 }
 
@@ -392,15 +393,21 @@ Width-Dependent
         width: 480px;
     }
 
-    .floating-photo {
+    .body section:nth-child(even) .floating-photo {
         text-align: left;
         float: left;
+        margin-right: 1em;
+    }
+
+    .body section:nth-child(odd) .floating-photo {
+        text-align: left;
+        float: right;
+        margin-left: 1em;
     }
 }
 
 @media only screen and (min-width: 720px) {
     .body .internal-column {
-        margin: auto;
         width: 640px;
     }
 }
