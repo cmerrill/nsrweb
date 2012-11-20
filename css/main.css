@@ -273,7 +273,6 @@ h1 span.always {
 }
 
 .footer {
-    margin-bottom: 10px;
     margin-top: 10px;
     text-align: center;
     padding: 10px;
@@ -374,7 +373,7 @@ Width-Dependent
 Header changes with width
 ---------------------------------------------------------------*/
 @media only all and (min-width: 420px) {
-    h1 span {
+    .home-page h1 span {
          display: inline;
     }
 }
