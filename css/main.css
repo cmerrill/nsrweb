@@ -65,6 +65,23 @@ a:hover {
     color:#F18D05;
 }
 
+a[href$=".pdf"]::after,
+a[href$=".txt"]::after,
+a[href$=".py"]::after,
+a[href$=".c"]::after
+a.file-link::after {
+    content: "\f016";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    text-decoration: inherit;
+
+    vertical-align: super;
+    font-size: .83em;
+    margin-left: .2em;
+}
+
 .center {
     margin: auto;
     max-width: 800px;
@@ -258,8 +275,18 @@ h1 span.always {
     width: auto;
 }
 
+.body .internal-column::after {
+    content: ".";
+    display: block;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    clear: both;
+}
+
 .body h2 {
     font-size: 2em;
+    line-height: 1em;
     margin-top: 50px;
     margin-bottom: 1em;
     text-align: center;
@@ -267,9 +294,8 @@ h1 span.always {
     font-variant: small-caps;
 }
 
-.body p{
-    margin-bottom: 0.75em;
-    padding-top: 0.25em;
+.body p {
+    margin-bottom: 1em;
 }
 
 .footer {
@@ -290,18 +316,29 @@ h1 span.always {
 
 /*
 ---------------------------------------------------------------*/
-.floating-photo{
+.floating-photo {
     text-align: center;
-    margin-right: 15px;
-    margin-bottom: 15px;
+    margin-right: 1em;
+    margin-bottom: 1em;
 }
 
-.floating-photo img{
+.floating-photo img {
     -o-border-radius: 10px;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     -border-radius: 10px;
     border-radius: 10px;
+}
+
+.floating-photo span {
+    display: block;
+    color: #616161;
+    font-size: x-small;
+    margin-top: 0.15em;
+}
+
+.floating-photo span a {
+    color: #616161;
 }
 
 /*---------------------------------------------------------------
