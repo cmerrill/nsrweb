@@ -394,16 +394,37 @@ Width-Dependent
         width: 480px;
     }
 
-    .body section:nth-child(even) .floating-photo {
+    .body section:nth-child(odd) .floating-photo {
         text-align: left;
         float: left;
         margin-right: 1em;
     }
 
-    .body section:nth-child(odd) .floating-photo {
+    .body section:nth-child(odd) .floating-photo:nth-of-type(even) {
+        float: right;
+        margin-left: 1em;
+        margin-right: auto;
+    }
+
+    .body section:nth-child(even) .floating-photo {
         text-align: left;
         float: right;
         margin-left: 1em;
+    }
+
+    .body section:nth-child(even) .floating-photo:nth-of-type(even) {
+        float: left;
+        margin-right: 1em;
+        margin-left: auto;
+    }
+
+    .body section::after {
+        content: ".";
+        overflow: hidden;
+        height: 0px;
+        width: 0px;
+        display: block;
+        clear: both;
     }
 }
 
