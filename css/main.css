@@ -68,7 +68,9 @@ a:hover {
 a[href$=".pdf"]::after,
 a[href$=".txt"]::after,
 a[href$=".py"]::after,
-a[href$=".c"]::after
+a[href$=".c"]::after,
+a[href$=".asc"]::after,
+a[href^="doc/"]::after,
 a.file-link::after {
     content: "\f016";
     font-family: FontAwesome;
@@ -361,6 +363,7 @@ footer {
     color: #616161;
     font-size: x-small;
     margin-top: 0.15em;
+    text-align: center;
 }
 
 .floating-photo span a {
