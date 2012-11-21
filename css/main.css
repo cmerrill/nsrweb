@@ -327,12 +327,26 @@ h1 span.always {
 footer {
     margin-top: 10px;
     text-align: center;
-    padding: 10px;
+    padding: 0;
     position: relative;
-    font-size: small;
+    font-size: 0.65em;
     color: #616161;
     margin-bottom: 10px;
     min-height: 10px;
+}
+
+footer span::before {
+    content: "|";
+    font-size: 1.5em;
+    font-weight: lighter;
+    display: inline-block;
+    margin-right: 0.4em;
+    margin-left: 0.3em;
+    /*vertical-align: middle;*/
+}
+
+footer span:first-of-type::before {
+    display: none;
 }
 
 .cc-license {
