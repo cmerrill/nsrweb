@@ -281,7 +281,6 @@ h1 span.always {
 
 .body {
     min-height: 400px;
-    border-bottom: 3px solid #F18D05;
     line-height: 1.2em;
 }
 
@@ -312,18 +311,28 @@ h1 span.always {
     font-variant: small-caps;
 }
 
+.body h3.subhead {
+    font-variant: small-caps;
+    text-align: center;
+    color: #616161;
+    font-size: 0.7em;
+    margin-top: -3em;
+    margin-bottom: 1.5em;
+}
+
 .body p {
     margin-bottom: 1em;
 }
 
-.footer {
+footer {
     margin-top: 10px;
     text-align: center;
     padding: 10px;
     position: relative;
     font-size: small;
     color: #616161;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
+    min-height: 10px;
 }
 
 .cc-license {
