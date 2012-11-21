@@ -82,6 +82,11 @@ a.file-link::after {
     margin-left: .2em;
 }
 
+h1 a {
+    color: inherit;
+    font-weight: inherit;
+}
+
 .center {
     margin: auto;
     max-width: 800px;
@@ -180,6 +185,16 @@ a.file-link::after {
     background-color: #113F8C;
 }
 
+.coloured-border {
+    border-bottom-color: #F18D05;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+.thick.coloured-border {
+    border-bottom-width: 3px;
+}
+
 /*
 ---------------------------------------------------------------*/
 
@@ -227,7 +242,6 @@ a.file-link::after {
 }
 
 .head {
-    border-bottom: 1px solid #F18D05;
     margin-top: 90px;
     /*margin-top: 6.5em;*/
     text-align: center;
@@ -246,6 +260,7 @@ h1 {
     text-align: center;
     color: #616161;
     margin-bottom: .35em;
+    line-height: 1em;
 }
 
 h1 span {
